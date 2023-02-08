@@ -1,0 +1,32 @@
+﻿@model WebApplication2.Models.UserModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>マイページログイン画面</title>
+</head>
+<body>
+    <p>ユーザーID・パスワードを入力してください。</p>
+    <div>
+        @using (Html.BeginForm())
+        {
+            <div>
+                @Html.LabelFor(model => model.UserID)
+                @Html.EditorFor(model => model.UserID)
+                <br>
+            </div>
+            <div>
+                    @Html.LabelFor(model => model.Password)
+                    @Html.EditorFor(model => model.Password)
+                    <button type="submit">ログイン</button>
+            </div>
+         }
+    </div>
+</body>
+</html> 

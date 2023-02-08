@@ -1,0 +1,27 @@
+﻿@model WebApplication2.Models.UserModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ようこそ</title>
+</head>
+<body>
+    <div>
+        <h2 class="heading">マイページ</h2>
+        <p>こんにちは、 @Html.DisplayFor(model => model.UserID) さん！</p>
+        <br>
+    </div>
+    <div>
+        <h3>会員情報</h3>
+        <p>ユーザー名: @Html.DisplayFor(model => model.UserID)</p>
+        <p>パスワード：@Html.DisplayFor(model => model.UserID)</p>
+        <p>住所:東京都新宿区</p>
+    </div>
+</body>
+</html>
